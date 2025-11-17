@@ -7,7 +7,7 @@ library(dplyr)
 library(cowplot)
 library(rsconnect)
 library(gitlink)
-data <- read.csv("data/VMH_Subset_Counts.csv", header=TRUE, row.names=1)
+data <- read_csv("data/VMH_Subset_Counts.csv", header=TRUE, row.names=1)
 
 set.seed(420)
 
