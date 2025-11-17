@@ -7,22 +7,23 @@ library(dplyr)
 library(cowplot)
 library(rsconnect)
 library(gitlink)
-data <- read_csv("data/VMH_Subset_Counts.csv", header=TRUE, row.names=1)
+library(readr)
+data <- read_csv("data/VMH_Subset_Counts.csv")
 
-set.seed(420)
+#set.seed(420)
 
-min_val <- -3.37e-5
-max_val <- 3.37e-5
+#min_val <- -3.37e-5
+#max_val <- 3.37e-5
 #data <- read.csv("Documents/Coding projects/R/Seurat Shiny App/VMH_New_Counts.csv", row.names=1)
 #data <- t(data)
 data$cluster <- as.factor(data$cluster)
 
-zeros_index <- which(data==0)
+#zeros_index <- which(data==0)
 
-num_zeros <- length(zeros_index)
-random_values <- runif(n=num_zeros, min=min_val, max=max_val)
+#num_zeros <- length(zeros_index)
+#random_values <- runif(n=num_zeros, min=min_val, max=max_val)
 
-data[data==0] <- random_values
+#data[data==0] <- random_values
 
 remove <- c("barcode","cluster")
 cols <- names(data)
