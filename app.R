@@ -12,8 +12,8 @@ library(gitlink)
 library(readr)
 
 fileurl <- "https://github.com/jrknoedler/ggplot2-violin-shiny-prototype/blob/main/data/VMH_Subset_Counts.csv"
-VMH <- read.csv(fileurl, header=TRUE, row.names=1)
-VMH
+VMH <- read.csv(fileurl, header=TRUE)
+head(VMH)
 
 #set.seed(420)
 
