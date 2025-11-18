@@ -9,7 +9,8 @@ library(cowplot)
 library(rsconnect)
 library(gitlink)
 library(readr)
-data <- read_csv("data/VMH_Subset_Counts.csv")
+VMH <- read_csv("data/VMH_Subset_Counts.csv")
+VMH
 
 #set.seed(420)
 
@@ -17,7 +18,7 @@ data <- read_csv("data/VMH_Subset_Counts.csv")
 #max_val <- 3.37e-5
 #data <- read.csv("Documents/Coding projects/R/Seurat Shiny App/VMH_New_Counts.csv", row.names=1)
 #data <- t(data)
-data$cluster <- as.factor(data$cluster)
+VMH$cluster <- as.factor(VMH$cluster)
 
 
 #zeros_index <- which(data==0)
@@ -28,7 +29,7 @@ data$cluster <- as.factor(data$cluster)
 #data[data==0] <- random_values
 
 remove <- c("...1","barcode","cluster")
-cols <- names(data)
+cols <- names(VMH)
 genes <- cols[! cols %in% remove]
 
 
@@ -51,7 +52,7 @@ server <- function(input, output) {
   
   
   output$violin_plot <- renderPlot({
-    ggplot(data, aes_string(x=data$cluster, y=input$Feature)) +geom_violin(trim=TRUE, scale="width",kernel="gaussian", fill="red") + theme_cowplot()
+    ggplot(VMH, aes_string(x=VMH$cluster, y=input$Feature)) +geom_violin(trim=TRUE, scale="width",kernel="gaussian", fill="red") + theme_cowplot()
   })
   
 }
