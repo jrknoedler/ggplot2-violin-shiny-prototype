@@ -10,7 +10,9 @@ library(cowplot)
 library(rsconnect)
 library(gitlink)
 library(readr)
-VMH <- read_csv("data/VMH_Subset_Counts.csv")
+
+fileurl <- "https://github.com/jrknoedler/ggplot2-violin-shiny-prototype/blob/main/data/VMH_Subset_Counts.csv"
+VMH <- read_csv(fileurl)
 VMH
 
 #set.seed(420)
