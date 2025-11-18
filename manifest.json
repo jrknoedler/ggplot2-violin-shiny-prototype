@@ -331,7 +331,12 @@
         "Maintainer": "Carson Sievert <carson@posit.co>",
         "Repository": "CRAN",
         "Date/Publication": "2025-01-30 23:20:02 UTC",
-        "Built": "R 4.5.0; ; 2025-04-01 15:54:53 UTC; unix"
+        "Built": "R 4.5.0; ; 2025-04-01 15:54:53 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "bslib",
+        "RemoteRef": "bslib",
+        "RemoteRepos": "https://cran.rstudio.com",
+        "RemoteSha": "0.9.0"
       }
     },
     "cachem": {
@@ -2278,7 +2283,7 @@
       "checksum": "ded15960dafb693a0bba0e5c52f3e360"
     },
     "app.R": {
-      "checksum": "db987fa80232448937c6a1e97fc7e3f9"
+      "checksum": "b2cd6da3806f08b3b58a5220dabe543e"
     },
     "data/VMH_Subset_Counts.csv": {
       "checksum": "cae35090b56893a4076a58a151e72b35"

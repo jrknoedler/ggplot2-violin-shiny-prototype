@@ -2,6 +2,7 @@
 ##with minimal dependencies for maximum portability between computers.
 
 library(shiny)
+library(bslib)
 library(ggplot2)
 library(dplyr)
 library(cowplot)
