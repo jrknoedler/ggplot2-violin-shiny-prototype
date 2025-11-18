@@ -12,7 +12,7 @@ library(gitlink)
 library(readr)
 
 fileurl <- "https://github.com/jrknoedler/ggplot2-violin-shiny-prototype/blob/main/data/VMH_Subset_Counts.csv"
-VMH <- read_csv(fileurl)
+VMH <- read.csv(fileurl, header=TRUE, row.names=1)
 VMH
 
 #set.seed(420)
@@ -31,7 +31,7 @@ VMH$cluster <- as.factor(VMH$cluster)
 
 #data[data==0] <- random_values
 
-remove <- c("...1","barcode","cluster")
+remove <- c("barcode","cluster")
 cols <- names(VMH)
 genes <- cols[! cols %in% remove]
 
