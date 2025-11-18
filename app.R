@@ -18,6 +18,7 @@ data <- read_csv("data/VMH_Subset_Counts.csv")
 #data <- t(data)
 data$cluster <- as.factor(data$cluster)
 
+
 #zeros_index <- which(data==0)
 
 #num_zeros <- length(zeros_index)
@@ -25,7 +26,7 @@ data$cluster <- as.factor(data$cluster)
 
 #data[data==0] <- random_values
 
-remove <- c("barcode","cluster")
+remove <- c("...1","barcode","cluster")
 cols <- names(data)
 genes <- cols[! cols %in% remove]
 
